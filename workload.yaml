@@ -1,0 +1,101 @@
+# Main service receiving response from ingress
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube-canary-app
+  labels:
+    app: kube-canary-app
+    service: kube-canary-app
+spec:
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: kube-canary-app
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kube-canary-app-deployment-v1
+spec:
+  replicas: 1
+  template: # template for the pods
+    metadata:
+      labels:
+        app: kube-canary-app
+        version: v1
+    spec:
+      containers:
+      - name: kube-canary-app
+        image: guykorean/hello-kube:2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+---
+# hello-msg services being called by main service
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-msg-app
+  labels:
+    app: hello-msg-app
+    service: hello-msg-app
+spec:
+  ports:
+  - port: 8888
+    name: http
+  selector:
+    app: hello-msg-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-msg-app-deployment-v1
+  labels:
+    app: hello-msg-app
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-msg-app
+      version: v1
+  template: # template for the pods
+    metadata:
+      labels:
+        app: hello-msg-app
+        version: v1
+    spec:
+      containers:
+      - name: hello-msg-app
+        image: guykorean/hello-msg:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8888
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-msg-app-deployment-v2
+  labels:
+    app: hello-msg-app
+    version: v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-msg-app
+      version: v2
+  template: # template for the pods
+    metadata:
+      labels:
+        app: hello-msg-app
+        version: v2
+    spec:
+      containers:
+      - name: hello-msg-app
+        image: guykorean/hello-msg:2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8888
+---

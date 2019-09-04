@@ -1,0 +1,45 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: istio-canary-gateway
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: kube-canary-vs-from-gateway
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - istio-canary-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /kube-canary-app
+    - uri:
+        exact: /kube-canary-app
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: kube-canary-app
+        subset: v1
+        port:
+          number: 8080
+#  http:
+#  - route:
+#    - destination:
+#        host: kube-canary-app
+#        port:
+#          number: 8080
+---
