@@ -1,3 +1,4 @@
+---
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -25,14 +26,14 @@ spec:
   http:
   - match:
     - uri:
-        prefix: /kube-canary-app
+        prefix: /static
     - uri:
-        exact: /kube-canary-app
+        exact: /static
     rewrite:
       uri: /
     route:
     - destination:
-        host: kube-canary-app
+        host: hello-kube
         subset: v1
         port:
           number: 8080

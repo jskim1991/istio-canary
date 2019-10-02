@@ -10,19 +10,19 @@ import org.springframework.web.client.RestTemplate;
 public class HelloKubeResource {
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
-    @GetMapping("/welcome")
-    public String welcome() {
-        String msg = "";
-        try {
-            msg = restTemplate.getForObject("http://hello-msg-app:8888/hello", String.class);
-        }
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-            msg = e.getMessage();
-        }
-        return msg;
+    @GetMapping(value = "/helloWorld")
+    public String getHelloWorld() {
+        return "Hello Docker World";
+    }
+
+    @GetMapping("/istio")
+    public String testIstio() {
+        String returnValue = restTemplate.getForObject("http://hello-msg:8888/hello", String.class);
+        System.out.println("return value : " + returnValue);
+
+        return returnValue;
     }
 
     @GetMapping("/init")
@@ -31,7 +31,7 @@ public class HelloKubeResource {
     }
 
     @Bean
-    public RestTemplate rest() {
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 }

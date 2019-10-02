@@ -42,36 +42,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- docker 이미지를 쉽게 만들기 위한 build plugin 추가 -->
+			<!-- build 명령어, mvn compile jib:build -->
+			<!-- build 명령어, mvn compile jib:dockerBuild -->
 			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>dockerfile-maven-plugin</artifactId>
-				<version>1.4.9</version>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>1.4.0</version>
 				<configuration>
-					<repository>${docker.image.prefix}/${project.artifactId}</repository>
-					<tag>1.0</tag>
+					<from>
+						<image>openjdk:alpine</image>
+					</from>
+					<to>
+						<!-- docker hub / docker id / conatainer name:tag -->
+						<image>docker.io/guykorean/hello-msg:1.0</image>
+					</to>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>unpack</id>
-						<phase>package</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>${project.groupId}</groupId>
-									<artifactId>${project.artifactId}</artifactId>
-									<version>${project.version}</version>
-								</artifactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
