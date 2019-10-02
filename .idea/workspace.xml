@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c7b7b7-ac2f-4b00-b459-82a7193c4524" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/canary-msg.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/canary-msg.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/egress.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-kube/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-kube/Dockerfile.bck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-kube/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-kube/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-kube/src/main/java/com/kuid/hellokube/controller/HelloKubeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-kube/src/main/java/com/kuid/hellokube/controller/HelloKubeResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-msg-v2/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-msg-v2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-msg-v2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-msg/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-msg/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-msg/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-msg/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hello-msg/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/istio-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/istio-gateway.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make-workspace.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make-workspace.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workload.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/workload.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workloadv2-inject.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/workloadv2-inject.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-msg-v2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hello-msg-v2/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +15,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/workload.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
+            <state relative-caret-position="1406">
               <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
             </state>
           </provider>
@@ -39,17 +24,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/canary-msg.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-532">
+            <state relative-caret-position="76">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/istio-gateway.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            <state relative-caret-position="504">
+              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hello-msg-v2/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -66,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hello-msg/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
+            <state relative-caret-position="779">
               <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
             </state>
           </provider>
@@ -101,6 +95,7 @@
         <option value="$PROJECT_DIR$/workload.yaml" />
         <option value="$PROJECT_DIR$/canary-msg.yaml" />
         <option value="$PROJECT_DIR$/istio-gateway.yaml" />
+        <option value="$PROJECT_DIR$/hello-msg-v2/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -115,7 +110,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="973" />
+    <option name="height" value="974" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -123,7 +118,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,10 +266,32 @@
               <item name="canary-test" type="462c0819:PsiDirectoryNode" />
               <item name="hello-msg-v2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="canary-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="canary-test" type="462c0819:PsiDirectoryNode" />
+              <item name="hello-msg-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="canary-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="canary-test" type="462c0819:PsiDirectoryNode" />
+              <item name="hello-msg-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="canary-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="canary-test" type="462c0819:PsiDirectoryNode" />
+              <item name="hello-msg-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,10 +330,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="973" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="974" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3221512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3253461" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -352,26 +368,10 @@
     <entry file="file://$PROJECT_DIR$/hello-kube-service.yaml" />
     <entry file="file://$PROJECT_DIR$/hello-kube-inject.yaml" />
     <entry file="file://$PROJECT_DIR$/../canaray-app.yaml/hello-msg-canary" />
-    <entry file="file://$PROJECT_DIR$/hello-msg/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello-msg-v2/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello-kube/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/egress.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hello-msg/Dockerfile" />
+    <entry file="file://$PROJECT_DIR$/hello-msg-v2/Dockerfile" />
+    <entry file="file://$PROJECT_DIR$/hello-kube/Dockerfile" />
+    <entry file="file://$PROJECT_DIR$/egress.yaml" />
     <entry file="file://$PROJECT_DIR$/workloadv2-inject.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2249">
@@ -420,20 +420,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello-kube/src/main/java/com/kuid/hellokube/controller/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hello-kube/src/main/java/com/kuid/hellokube/controller/config" />
     <entry file="file://$PROJECT_DIR$/hello-kube/src/main/java/com/kuid/hellokube/controller/HelloKubeResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workload.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1406">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canary-msg.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -446,29 +451,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hello-msg/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="779">
           <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workload.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canary-msg.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-532">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/istio-gateway.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="504">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello-msg-v2/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
