@@ -50,7 +50,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-msg
+  name: hello-msg-v1
   labels:
     app: hello-msg
     version: v1
@@ -72,30 +72,30 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8888
-#---
-#apiVersion: apps/v1
-#kind: Deployment
-#metadata:
-#  name: hello-msg-app-v2
-#  labels:
-#    app: hello-msg-app
-#    version: v2
-#spec:
-#  replicas: 1
-#  selector:
-#    matchLabels:
-#      app: hello-msg-app
-#      version: v2
-#  template: # template for the pods
-#    metadata:
-#      labels:
-#        app: hello-msg-app
-#        version: v2
-#    spec:
-#      containers:
-#      - name: hello-msg-app
-#        image: guykorean/hello-msg:2.0
-#        imagePullPolicy: Always
-#        ports:
-#        - containerPort: 8888
-#---
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-msg-v2
+  labels:
+    app: hello-msg
+    version: v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-msg
+      version: v2
+  template: # template for the pods
+    metadata:
+      labels:
+        app: hello-msg
+        version: v2
+    spec:
+      containers:
+      - name: hello-msg-app
+        image: guykorean/hello-msg:2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8888
+---

@@ -82,3 +82,10 @@ curl -X GET http://localhost/kube-canary-app/welcome
 curl -X GET http://localhost/kube-canary-app/init
 
 istioctl proxy-config route $INGRESS_POD -o json -n istio-system
+
+
+## Kiali ##
+kubectl port-forward \
+    $(kubectl get pod -n istio-system -l app=kiali \
+    -o jsonpath='{.items[0].metadata.name}') \
+    -n istio-system 20001
